@@ -1,0 +1,82 @@
+// Navbar
+.navbar {
+    height: 50px;
+
+    // Navbar section
+    .navbar-section {
+        width: calc( 100% / 3 );
+
+        // Section position and Alignment
+        &.navbar-section-center {
+            text-align: center;
+            .navbar-item {
+                margin-top: 6px;
+                @include display(inline-block);  
+            }
+        }
+        &.navbar-section-right {
+            .navbar-item{ float: right }
+        }
+        &.navbar-section-left {
+            .navbar-item{ float: left }
+        }
+
+        // Navbar Brand
+        .navbar-brand {
+            @include display( block );
+            height: 50px;
+            line-height: 36px;
+        }
+
+        // Navbar Item
+        .navbar-item {
+            @include display( block );
+            height: 50px;
+            font-size: 14px;
+            line-height: 50px;
+            position: relative;
+            overflow: hidden;
+            padding: 0px 10px;
+            color: theme-color( 'light' );
+
+            .rounded-circle {
+                border: 5px solid theme-color( 'primary-hover' );
+            }
+            &:hover {
+                cursor: pointer;
+                background: theme-color( 'primary-hover' );
+                &:hover:after { animation: ripple 1s ease-out }                
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 5px;
+                height: 5px;
+                background: rgba(255, 255, 255, .3);
+                border-radius: 100%;
+                opacity: 0;
+                transform: scale(1, 1) translate(-50%);
+                transform-origin: 50% 50%;
+            }
+        }
+    }
+
+    // Toggle sidebar
+    .toggle-sidebar {
+        width: 50px;
+        padding: 13px !important;
+
+        i { transition: .5s; position: absolute }
+        i.open { opacity: 1 }
+        i.closed { opacity: 0 }
+
+        &.active {
+            i.open {  opacity: 0 }
+            i.closed { opacity: 1 }
+        }
+    }
+}
+// End of file

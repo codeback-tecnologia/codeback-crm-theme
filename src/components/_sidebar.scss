@@ -1,0 +1,93 @@
+// Sidebar
+.sidebar {
+    border-right: 3px solid color( 'gray-300' );
+
+    // Grupos de sidebar
+    .sidebar-group {
+
+        // Titulo do grupo
+        .sidebar-group-title {
+            font-size: 18px;
+            color: color( 'gray-600' );
+            padding: 5px 10px;
+            padding-left: 35px;
+            position: relative;
+            transition: .25s;
+            
+            i {
+                @include position( absolute, 7px 0 );
+                @include display( block );
+                width: 23px;
+            }
+
+            &.active {
+                color: color( 'gray-900' );            
+                i { transform: rotate( 90deg ) }
+            }
+
+            &:hover {
+                 cursor: pointer;
+                 text-decoration: underline;
+            }
+        }
+
+        // Group list
+        .sidebar-group-list {
+            padding-left: 35px;
+            padding-bottom: 20px;
+
+            .sidebar-group-list-item {
+                margin-top: 5px;
+                color: color( 'gray-600' );
+                transition: .25s;
+                padding: 7px 0px;
+
+                &:hover, &.active {
+                    cursor: pointer;
+                    color: color( 'gray-900' );                
+                }
+                i {
+                    font-size: 16px;
+                    margin-right: 10px;
+                }
+            }
+
+            .sidebar-child-group {
+                padding-left: 20px;
+
+                .sidebar-child-group-item {
+                    padding-left: 11px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    color: color( 'gray-600' );
+                    transition: .25;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: color( 'gray-900' );                    
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-between(xs, md) {
+    .sidebar {
+        position: fixed;
+        top: 50px;
+        left: 0px;
+        height: calc( 100vh - 50px );
+        z-index: 99;
+        background: color( 'white' );
+        width: 300px;
+        padding-top: 50px;
+        transition: .25s linear;
+
+        &.toggled {
+            left: -300px;
+        }
+    }
+}
+
+// End of file

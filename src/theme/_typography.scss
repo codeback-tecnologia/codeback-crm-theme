@@ -1,0 +1,27 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+// Seta a font do logo
+.logo {
+    font-family: 'Lobster', cursive;
+}
+
+// Paragrafos de leituras
+.reading {
+    text-align: justify;
+    
+    &:first-letter {
+        margin-left: 25px;
+    }
+}
+
+// Seta os tamanhos de fonte
+$start: 2;
+@for $i from 1 through 50 {
+    .f-#{$i * $start} {
+        font-size: $i*$start#{'px'}
+    }
+}
+
+// End of file
