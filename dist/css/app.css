@@ -11896,6 +11896,41 @@ a.text-primary-hover:focus, a.text-primary-hover:hover {
   opacity: 1;
 }
 
+#dropbox {
+  width: calc( 100vw - 10px);
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  position: absolute;
+  right: 5px;
+  top: 45px;
+  max-width: 400px;
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  transition: .25s;
+  display: hidden;
+  padding: 10px;
+  z-index: 99;
+}
+
+#dropbox.active {
+  display: block;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+#dropbox .list-group,
+#dropbox .list-group .list-group-item {
+  border: 0px !important;
+  font-weight: bold;
+  color: #777;
+}
+
+#dropbox .list-group .list-group-item:hover {
+  cursor: pointer;
+  color: #FF5053;
+}
+
 .sidebar {
   border-right: 3px solid #DDE0E6;
 }

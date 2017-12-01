@@ -24,9 +24,31 @@
     </div><!-- center content -->
 
     <div class="navbar-section navbar-section-right">
-        <div class="navbar-item">
+        <div class="navbar-item avatar-wrapper" onclick="toggleDropbox()">
             <img src="images/avatar.jpg" width="35px" class="rounded-circle">
         </div>       
     </div><!-- right content -->
 
 </nav><!-- nav -->
+
+<div id="dropbox" class="p-2 card" onfocusout="toggleDropbox()">
+    <div class="card-header row">
+        <div class="col-2">
+            <img class="rounded-circle" width="50px" src="http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg">                
+        </div>
+        <div class="col-10">
+            <h5>Gustavo Vilas Boas</h5>
+            <h6>gustavo.villasboas@codeback.com.br</h6>
+            <h6 class="text-muted">+55 (15) 99838-2273</h6>
+        </div>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+    <div class="card-body">
+        <a href="#" class="btn btn-success btn-sm">Compartilhar acesso</a>
+        <a href="#" class="btn btn-default btn-sm float-right">Sair</a>
+    </div>
+</div><!-- dropbox -->

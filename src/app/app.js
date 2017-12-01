@@ -17,5 +17,6 @@ require( 'bootstrap' );
 
 // JS
 require( '../js/sidebar' );
+require( '../js/navbar' );
 
 // End of file
