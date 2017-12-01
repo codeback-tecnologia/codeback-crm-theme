@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/app.css">
+
+    <script type="text/javascript">
+        document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
+    </script> 
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-primary">
+    
+    <div class="navbar-section navbar-section-left">
+        <div class="navbar-brand d-none d-lg-block float-left">
+            <span class="logo f-5">
+                Codeback
+            </span>
+        </div>
+        <div class="navbar-item pt-2 d-lg-none toggle-sidebar">
+            <i class="material-icons open">menu</i>
+            <i class="material-icons closed">close</i>
+        </div>
+    </div><!-- left content -->
+
+    <div class="navbar-section navbar-section-center">
+        <div class="navbar-brand d-inline-block d-lg-none">
+            <span class="logo f-5">
+                Codeback
+            </span>
+        </div>
+        <div class="d-none d-lg-block">
+            <div class="navbar-item">Inicio</div>                
+        </div>
+    </div><!-- center content -->
+
+    <div class="navbar-section navbar-section-right">
+        <div class="navbar-item avatar-wrapper" onclick="toggleDropbox()">
+            <img src="images/avatar.jpg" width="35px" class="rounded-circle">
+        </div>       
+    </div><!-- right content -->
+
+</nav><!-- nav -->
+
+<div id="dropbox" class="p-2 card" onfocusout="toggleDropbox()">
+    <div class="card-header row">
+        <div class="col-2">
+            <img class="rounded-circle" width="50px" src="http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg">                
+        </div>
+        <div class="col-10">
+            <h5>Gustavo Vilas Boas</h5>
+            <h6>gustavo.villasboas@codeback.com.br</h6>
+            <h6 class="text-muted">+55 (15) 99838-2273</h6>
+        </div>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+    <div class="card-body">
+        <a href="#" class="btn btn-success btn-sm">Compartilhar acesso</a>
+        <a href="#" class="btn btn-default btn-sm float-right">Sair</a>
+    </div>
+</div><!-- dropbox -->
+    
+    <div class="container mt-3">
+        <div class="row">
+            <div class="sidebar toggled col-lg-3">
+
+    <div class="sidebar-group">
+        <div data-toggle="collapse" data-parent=".sidebar" href="#firstChild" class="rippled sidebar-group-title active">
+            <i class="material-icons">chevron_right</i>
+            Aplicativos
+            <span class="material-icons float-right">add</span>
+        </div>
+        <div id="firstChild" class="collapse show sidebar-group-list">
+            <div class="sidebar-group-list-item">Go Reach</div>
+            <div class="sidebar-group-list-item">#PartiuVender</div>
+            <div class="sidebar-group-list-item">Force Investor</div>
+            <div class="sidebar-group-list-item">Conta Ágil</div>
+        </div>
+    </div><!-- grupo 1 -->
+
+    <div class="sidebar-group">
+        <div data-toggle="collapse" data-parent=".sidebar" href="#secondChild"  class="sidebar-group-title">
+            <i class="material-icons">chevron_right</i>
+            Aplicativos
+        </div>
+        <div id="secondChild" class="collapse sidebar-group-list">
+
+            <div class="sidebar-group-list-item active">
+                <i class="material-icons">lock</i>
+                Minha conta
+            </div>
+
+            <div class="sidebar-child-accordion">
+                <div data-parent="#secondChild" href="#android" data-toggle="collapse" class="rippled sidebar-group-list-item">
+                    <i class="material-icons">android</i>
+                    Android
+                </div>
+
+                <div id="android" class="collapse sidebar-child-group mt-2">
+                    <div class="sidebar-child-group-item">Adicionar</div>
+                    <div class="sidebar-child-group-item">Remover</div>
+                    <div class="sidebar-child-group-item">Editar</div>
+                    <div class="sidebar-child-group-item">Enviar e-mail</div>
+                </div>
+            </div><!-- android accordion -->
+
+
+            <div class="sidebar-child-accordion">
+                <div data-parent="#secondChild" href="#crons" data-toggle="collapse" class="rippled sidebar-group-list-item">
+                    <i class="material-icons">alarm</i>
+                    Crons
+                </div>
+
+                <div id="crons" class="collapse sidebar-child-group mt-2">
+                    <div class="sidebar-child-group-item">Adicionar</div>
+                    <div class="sidebar-child-group-item">Remover</div>
+                    <div class="sidebar-child-group-item">Editar</div>
+                    <div class="sidebar-child-group-item">Enviar e-mail</div>
+                </div>
+            </div><!-- cron accordion -->
+
+        </div>
+    </div>
+
+</div>
+            <div class="col-lg-8">
+                
+
+<div class="page-header">
+    <h1>Logs Timeline</h1>
+</div>
+<hr>
+
+<ul class="timeline">
+    <h5 class="title-timeline">Novembro 2017</h5>
+    <li>
+        <div class="timeline-badge">
+            <i class="fa fa-user"></i>
+        </div>
+        <div class="timeline-panel">
+            <div class="row">
+                <div class="col">
+                    <img class="avatar-image" width="30px" src="images/avatar.jpg" alt="">
+                    <h4 class="card-title">Gustavo Villas Boas...</h4>
+                </div>
+                <!-- left content -->
+
+                <div class="col text-right">
+                    <p class="user-permission">
+                        <i class="fa fa-black-tie"></i> Admin
+                    </p>
+                </div>
+                <!-- right content -->
+            </div>
+            <hr class="mt-1">
+            <div class="body">
+                <div class="row">
+                    <div class="col">
+                        <p class="card-text">Logou no sistema.</p>
+                    </div>
+                    <div class="col time text-right text-info">
+                        <p mr-5><i class="fa fa-calendar"></i> 06/02/16</p>
+                        <p><i class="fa fa-clock-o"></i> 09:30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <!-- --------------------------------------------------------- -->
+    <li>
+    <div class="timeline-badge">
+        <i class="fa fa-user"></i>
+    </div>
+    <div class="timeline-panel">
+        <div class="row">
+            <div class="col">
+                <img class="avatar-image" width="30px" src="images/avatar.jpg" alt="">
+                <h4 class="card-title">Gustavo Villas Boas...</h4>
+            </div>
+            <!-- left content -->
+
+            <div class="col text-right">
+                    <p class="user-permission">
+                        <i class="fa fa-black-tie"></i> Admin
+                    </p>
+                </div>
+                <!-- right content -->
+            </div>
+            <hr class="mt-1">
+            <div class="body">
+                <div class="row">
+                    <div class="col">
+                        <p class="card-text">Logou no sistema.</p>
+                    </div>
+                    <div class="col time text-right text-info">
+                        <p mr-5><i class="fa fa-calendar"></i> 06/02/16</p>
+                        <p><i class="fa fa-clock-o"></i> 09:30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+                    
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
